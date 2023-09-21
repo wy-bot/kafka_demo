@@ -32,7 +32,7 @@ public class ProducerDemo {
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         Producer<String, String> producer = new KafkaProducer<>(props);
         for (int i = 0; i < 100; i++)
-            producer.send(new ProducerRecord<String, String>("test002", Integer.toString(i), "dd:" + i));
+            producer.send(new ProducerRecord<String, String>("test002", Integer.toString(i), "ff:" + i));
         //Thread.sleep(1000000)
         producer.close();
     }
